@@ -731,7 +731,7 @@ A docstring should give enough information to write a call to the function
 without reading the function's code. The docstring should be descriptive-style
 (`"""Fetches rows from a Bigtable."""`) rather than imperative-style (`"""Fetch
 rows from a Bigtable."""`), except for `@property` data descriptors, which
-should use the <a href="#384-classes">same style as attributes</a>. A docstring
+should use the [same style as attributes](#classes). A docstring
 should describe the function's calling syntax and its semantics, not its
 implementation. For tricky code, comments alongside the code are more
 appropriate than using docstrings.
@@ -753,6 +753,7 @@ where the function's name and signature are informative enough that it can be
 aptly described using a one-line docstring.
 
 <a id="doc-function-args"></a>
+
 [*Args:*](#doc-function-args)
 :   List each parameter by name. A description should follow the name, and be
     separated by a colon followed by either a space or newline. If the
@@ -764,6 +765,7 @@ aptly described using a one-line docstring.
     (arbitrary keyword arguments), they should be listed as `*foo` and `**bar`.
 
 <a id="doc-function-returns"></a>
+
 [*Returns:* (or *Yields:* for generators)](#doc-function-returns)
 :   Describe the type and semantics of the return value. If the function only
     returns None, this section is not required. It may also be omitted if the
@@ -772,6 +774,7 @@ aptly described using a one-line docstring.
     describe return value.
 
 <a id="doc-function-raises"></a>
+
 [*Raises:*](#doc-function-raises)
 :   List all exceptions that are relevant to the interface followed by a
     description. Use a similar exception name + colon + space or newline and
@@ -1332,6 +1335,7 @@ ignore`.
 If an internal variable has a type that is hard or impossible to infer, you can
 specify its type in a couple ways.
 
+<a id="type-comments"></a>
 
 [*Type Comments:*](#type-comments)
 :   Use a `# type:` comment on the end of the line
@@ -1340,6 +1344,7 @@ specify its type in a couple ways.
 a = SomeUndecoratedFunction()  # type: Foo
 ```
 
+<a id="annotated-assignments"></a>
 
 [*Annotated Assignments*](#annotated-assignments)
 :   Use a colon and type between the variable name and value, as with function
@@ -1455,7 +1460,7 @@ def py3_only(x: Union[bytes, str]) -> Union[bytes, str]:
 
 If all the string types of a function are always the same, for example if the
 return type is the same as the argument type in the code above, use
-[AnyStr](#typing-type-var).
+[AnyStr](#TypeVars).
 
 Writing it like this will simplify the process of porting the code to Python 3.
 
@@ -1511,11 +1516,11 @@ def f(x: "sketch.Sketch"): ...
 
 Circular dependencies that are caused by typing are code smells. Such code is a
 good candidate for refactoring. Although technically it is possible to keep
-circular dependencies, the [build system](#typing-build-deps) will not let you
+circular dependencies, the build system will not let you
 do so because each module has to depend on the other.
 
 Replace modules that create circular dependency imports with `Any`. Set an
-[alias](#typing-aliases) with a meaningful name, and use the real type name from
+[alias](#Type-Aliases) with a meaningful name, and use the real type name from
 this module (any attribute of Any is Any). Alias definitions should be separated
 from the last import by one line.
 
@@ -1549,7 +1554,7 @@ def get_names(employee_ids: List) -> Dict:
 ```
 
 If the best type parameter for a generic is `Any`, make it explicit, but
-remember that in many cases [`TypeVar`](#typing-type-var) might be more
+remember that in many cases [`TypeVar`](#TypeVars) might be more
 appropriate:
 
 ```python
