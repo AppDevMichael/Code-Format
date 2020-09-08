@@ -1,3 +1,9 @@
 [submodule "php"]
 	path = php
 	url = https://github.com/php-fig/fig-standards
+[submodule "javascript"]
+	path = javascript
+	url = https://github.com/rwaldron/idiomatic.js/
+[submodule "html"]
+	path = html
+	url = https://gist.github.com/ryansechrest/8693303
