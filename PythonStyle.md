@@ -101,7 +101,7 @@ Avoid global variables.
 
 While they are technically variables, module-level constants are permitted and encouraged. For example: `MAX_HOLY_HANDGRENADE_COUNT = 3`. Constants must be named using all caps with underscores. See [Naming](#naming) below.
 
-If needed, globals should be declared at the module level and made internal to the module by prepending an _ to the name. External access must be done through public module-level functions. See [Naming](#naming)] below.
+If needed, globals should be declared at the module level and made internal to the module by prepending an _ to the name. External access must be done through public module-level functions. See [Naming](#naming) below.
 
 ### Exceptions 
 
@@ -659,6 +659,8 @@ indentation. To learn more about Black's opinions, to go
 
 It is extremely recommended to read teh [Black Readme](https://github.com/psf/black)
 
+
+
 ### Comments and Docstrings 
 
 Be sure to use the right style for module, function, method docstrings and
@@ -682,25 +684,38 @@ docstrings below.
 
 #### Modules 
 
-Every file should contain license boilerplate. Choose the appropriate boilerplate for the license used by the project (for example, Apache 2.0, BSD, LGPL, GPL)
+Files should start with a docstring for a better understanding 
+and maintenance of the code, the header of 
+different modules should follow some standard format and information. 
 
-Files should start with a docstring describing the contents and usage of the
-module.
+| Name               | Value                                     |
+|--------------------|-------------------------------------------|
+| File               | Name of the file                          |
+| Project            | Name of the repository                    |
+| Created Date       | Date the file was created                 |
+| Authors            | List of Authors                           |
+| Modified By        | Name of the last author to edit the file  |
+| Last Modified Date | Date of the last modification to the file |
+| Summary            | A short summary about what the file does  |
+
+##### Example
 ```python
-"""A one line summary of the module or program, terminated by a period.
-
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
-
-  Typical usage example:
-
-  foo = ClassFoo()
-  bar = foo.FunctionBar()
-"""
+'''
+File:           example.py
+Project:        coasteye
+Created Date:   Tuesday, 8th September 2020 3:27 PM
+-----
+Authors:        Rick Astley
+                Gabe Newell
+-----
+Modified By:    Rick Astley
+Date Modified:  Wednesday, 18th May, 2033 3:33 AM
+-----
+Summary:        A summary of the module or program, it should contain an
+                overall description of the module or program. Should be 
+                terminated by a period.
+'''
 ```
-
 
 #### Functions and Methods 
 
