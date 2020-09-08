@@ -695,7 +695,7 @@ different modules should follow some standard format and information.
 | Created Date       | Date the file was created                 |
 | Authors            | List of Authors                           |
 | Modified By        | Name of the last author to edit the file  |
-| Last Modified Date | Date of the last modification to the file |
+| Date Modified      | Date of the last modification to the file |
 | Summary            | A short summary about what the file does  |
 
 ##### Example
