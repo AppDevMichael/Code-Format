@@ -3,6 +3,90 @@
 
 <h2 align="center">Python Code Format</h2>
 
+<details>
+    <summary>Click to expand!</summary>
+
+- [Language Rules](#language-rules)
+* [Global variables](#global-variables)
+    + [Definition](#definition)
+    + [Pros](#pros)
+    + [Cons](#cons)
+    + [Decision](#decision)
+* [Exceptions](#exceptions)
+    + [Definition](#definition-1)
+    + [Pros](#pros-1)
+    + [Cons](#cons-1)
+    + [Decision](#decision-1)
+* [Comprehensions & Generator Expressions](#comprehensions---generator-expressions)
+    + [Definition](#definition-2)
+    + [Pros](#pros-2)
+    + [Cons](#cons-2)
+    + [Decision](#decision-2)
+* [Default Iterators and Operators](#default-iterators-and-operators)
+    + [Definition](#definition-3)
+    + [Pros](#pros-3)
+    + [Cons](#cons-3)
+    + [Decision](#decision-3)
+* [Default Argument Values](#default-argument-values)
+    + [Definition](#definition-4)
+    + [Pros](#pros-4)
+    + [Cons](#cons-4)
+    + [Decision](#decision-4)
+* [Properties](#properties)
+    + [Definition](#definition-5)
+    + [Pros](#pros-5)
+    + [Cons](#cons-5)
+    + [Decision](#decision-5)
+* [True/False Evaluations](#true-false-evaluations)
+    + [Definition](#definition-6)
+    + [Pros](#pros-6)
+    + [Cons](#cons-6)
+    + [Decision](#decision-6)
+* [Deprecated Language Features](#deprecated-language-features)
+    + [Definition](#definition-7)
+    + [Decision](#decision-7)
+* [Type Annotated Code](#type-annotated-code)
+    + [Definition](#definition-8)
+    + [Pros](#pros-7)
+    + [Cons](#cons-7)
+    + [Decision](#decision-8)
+- [Python Style Rules](#python-style-rules)
+* [Black](#black)
+* [Comments and Docstrings](#comments-and-docstrings)
+    + [Docstrings](#docstrings)
+    + [Modules](#modules)
+    + [Functions and Methods](#functions-and-methods)
+    + [Classes](#classes)
+    + [Block and Inline Comments](#block-and-inline-comments)
+    + [Punctuation, Spelling, and Grammar](#punctuation--spelling--and-grammar)
+* [TODO Comments](#todo-comments)
+* [Naming](#naming)
+    + [Names to Avoid](#names-to-avoid)
+    + [Naming Conventions](#naming-conventions)
+    + [File Naming](#file-naming)
+    + [Guidelines derived from [Guido](https://en.wikipedia.org/wiki/Guido_van_Rossum)'s Recommendations](#guidelines-derived-from--guido--https---enwikipediaorg-wiki-guido-van-rossum--s-recommendations)
+* [Function length](#function-length)
+* [Type Annotations](#type-annotations)
+    + [General Rules](#general-rules)
+    + [Line Breaking](#line-breaking)
+    + [Forward Declarations](#forward-declarations)
+    + [Default Values](#default-values)
+    + [NoneType](#nonetype)
+    + [Type Aliases](#type-aliases)
+    + [Ignoring Types](#ignoring-types)
+    + [Typing Variables](#typing-variables)
+    + [Tuples vs Lists](#tuples-vs-lists)
+    + [TypeVars](#typevars)
+    + [String types](#string-types)
+    + [Imports For Typing](#imports-for-typing)
+    + [Conditional Imports](#conditional-imports)
+    + [Circular Dependencies](#circular-dependencies)
+    + [Generics](#generics)
+- [Parting Words](#parting-words)
+</details>
+
+
+## Language Rules
 ### Global variables
 Avoid global variables.
 #### Definition
@@ -15,9 +99,9 @@ Has the potential to change module behavior during the import, because assignmen
 
 Avoid global variables.
 
-While they are technically variables, module-level constants are permitted and encouraged. For example: MAX_HOLY_HANDGRENADE_COUNT = 3. Constants must be named using all caps with underscores. See Naming below.
+While they are technically variables, module-level constants are permitted and encouraged. For example: `MAX_HOLY_HANDGRENADE_COUNT = 3`. Constants must be named using all caps with underscores. See [Naming](#naming) below.
 
-If needed, globals should be declared at the module level and made internal to the module by prepending an _ to the name. External access must be done through public module-level functions. See Naming below.
+If needed, globals should be declared at the module level and made internal to the module by prepending an _ to the name. External access must be done through public module-level functions. See [Naming](#naming)] below.
 
 ### Exceptions 
 
