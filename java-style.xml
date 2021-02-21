@@ -1137,7 +1137,7 @@
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_annotation" value="do not insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_switch" value="insert"/>
     </profile>
-<profile kind="CodeFormatterProfile" name="MediumStyle" version="20">
+    <profile kind="CodeFormatterProfile" name="MediumStyle" version="20">
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_ellipsis" value="insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_enum_declarations" value="insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_allocation_expression" value="do not insert"/>
@@ -1516,7 +1516,7 @@
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_annotation" value="do not insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_switch" value="insert"/>
     </profile>
-        <profile kind="CodeFormatterProfile" name="general" version="20">
+    <profile kind="CodeFormatterProfile" name="general" version="20">
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_ellipsis" value="insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_enum_declarations" value="insert"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_allocation_expression" value="do not insert"/>
@@ -1707,7 +1707,7 @@
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_closing_paren_in_constructor_declaration" value="do not insert"/>
         <setting id="org.eclipse.jdt.core.formatter.comment.insert_new_line_between_different_tags" value="insert"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_conditional_expression_chain" value="16"/>
-        <setting id="org.eclipse.jdt.core.formatter.comment.format_header" value="true"/>
+        <setting id="org.eclipse.jdt.core.formatter.comment.format_header" value="false"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_allocation_expression" value="18"/>
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_assertion_message_operator" value="true"/>
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_additive_operator" value="insert"/>
